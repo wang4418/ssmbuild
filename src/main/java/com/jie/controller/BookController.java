@@ -26,11 +26,17 @@ public class BookController {
     @Qualifier("BookServiceImpl")
     private BookService bookService;
 //查询全部书籍，返回一个书籍展示页面
-    @RequestMapping("allBook")
+    @RequestMapping("/allBook")
     public String list(Model model){
         List<Books> list = bookService.queryAllBooks();
         model.addAttribute("list",list);
         return "allBook";
+    }
+
+    //跳转到书籍增加页面
+    @RequestMapping("/toAddPaper")
+    public String toAddPaper(){
+        return "addBook";
     }
 
 }
