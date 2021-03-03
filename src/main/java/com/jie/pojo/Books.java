@@ -21,6 +21,6 @@ public class Books {
     private int bookCounts;
     private  String detail;
 
-    public Books() {
-    }
+//    public Books() {
+//    }
 }

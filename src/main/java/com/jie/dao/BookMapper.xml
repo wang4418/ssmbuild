@@ -13,10 +13,10 @@ delete from ssmbuild.books where bookID=#{bookId}
     <update id="updateBook" parameterType="Books">
         update ssmbuild.books set bookName=#{bookName},bookCounts=#{bookCounts},detail=#{detail} where bookID=#{bookID}
     </update>
-<select id="queryBookById" parameterType="Books">
+<select id="queryBookById" resultType="Books">
     select*from ssmbuild.books where bookID=#{bookID}
 </select>
-    <select id="queryAllBooks" parameterType="Books">
+    <select id="queryAllBooks"  resultType="Books">
         select *from ssmbuild.books
     </select>
 </mapper>
