@@ -14,9 +14,12 @@ delete from ssmbuild.books where bookID=#{bookId}
         update ssmbuild.books set bookName=#{bookName},bookCounts=#{bookCounts},detail=#{detail} where bookID=#{bookID}
     </update>
 <select id="queryBookById" resultType="Books">
-    select*from ssmbuild.books where bookID=#{bookID}
+    select*from ssmbuild.books where bookID=#{bookId}
 </select>
     <select id="queryAllBooks"  resultType="Books">
         select *from ssmbuild.books
+    </select>
+    <select id="queryBookByName" resultType="Books">
+select *from ssmbuild.books where bookName=#{bookName}
     </select>
 </mapper>
